@@ -20,7 +20,7 @@ Machine Learning.
 ## Model Used
 - Linear Regression
 - R2 Score : 0.676
-- RMSE     : 212,033
+- RMSE     : 212,033.77
 
 ## Libraries Used
 - Python
@@ -48,10 +48,3 @@ For a house priced at $500,000
 ## Author
 Ramya Sri Lalitha
 B.Tech Computer Science & Engineering
-
-**One important thing:**
-
-Update the R2 Score and RMSE with your **actual values** — you already have them:
-```
-R2 Score : 0.6761035504336752
-RMSE     : 212033.77031852517
