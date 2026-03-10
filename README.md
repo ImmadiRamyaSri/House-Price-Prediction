@@ -48,26 +48,6 @@ For a house priced at $500,000
 ## Author
 Ramya Sri Lalitha
 B.Tech Computer Science & Engineering
-```
-
----
-
-**How to create this file:**
-
-**Option 1 — Directly on GitHub (easiest):**
-- Go to your repository
-- Click **"Add file"** → **"Create new file"**
-- Name it exactly **README.md**
-- Paste the above content
-- Click **"Commit changes"** ✅
-
-**Option 2 — On your computer:**
-- Open Notepad
-- Paste the content
-- Save as **README.md** in your project folder
-- Then upload to GitHub
-
----
 
 **One important thing:**
 
