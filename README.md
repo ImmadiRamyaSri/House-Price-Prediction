@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # House Price Prediction 🏠
 
 ## About the Project
