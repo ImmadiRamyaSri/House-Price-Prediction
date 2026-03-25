@@ -1,15 +1,21 @@
+<<<<<<< HEAD
 # House Price Prediction 🏠
 
 ## About the Project
 Predicting house prices using Machine Learning
 based on King County, Seattle dataset.
-This is my first ML project built while learning
-Machine Learning.
+This project was built and improved while learning
+Machine Learning through Andrew Ng's ML Specialization.
 
 ## Dataset
 - Source: Kaggle - House Prices King County
 - 21,000+ houses
 - 20 features including size, location, condition
+
+## Project Structure
+- House_Price_Basic.ipynb    → Basic Linear Regression
+- House_Price_Improved.ipynb → Improved with Feature Engineering
+                               and Multiple Models
 
 ## Features Used
 - sqft_living, bedrooms, bathrooms
@@ -17,10 +23,51 @@ Machine Learning.
 - yr_built, floors, waterfront
 - sqft_living15, lat
 
-## Model Used
-- Linear Regression
-- R2 Score : 0.676
-- RMSE     : 212,033
+## Feature Engineering Applied
+- house_age     → calculated from yr_built
+- is_renovated  → extracted from yr_renovated
+- bed_bath_rooms → bedrooms + bathrooms combined
+- sqft_ratio    → sqft_living / sqft_lot
+
+## Models Used & Results
+
+### Basic Notebook
+| Model | R2 Score | RMSE |
+|---|---|---|
+| Linear Regression | 0.6935 | 210,255 |
+
+### Improved Notebook
+| Model | R2 Score | RMSE |
+|---|---|---|
+| Linear Regression | 0.7107 | 200,961 |
+| Ridge Regression | 0.7107 | 200,961 |
+| Lasso Regression | 0.7107 | 200,961 |
+| Polynomial Degree 2 | 0.7847 | 173,390 |
+| Polynomial Degree 3 | 0.6383 | 224,717 |
+
+✅ Best Model → Polynomial Regression Degree 2
+✅ Best R2    → 0.7847
+✅ Best RMSE  → 173,390
+
+## Overall Improvement
+| | R2 Score | RMSE |
+|---|---|---|
+| Basic Notebook | 0.6935 | 210,255 |
+| Improved Notebook | 0.7847 | 173,390 |
+| Improvement | +0.091 | -36,865 |
+
+## Key Findings
+- sqft_living is most important feature
+- grade is second most important
+- house_age (engineered feature) is 3rd most important
+- Location (lat) significantly affects price
+- Polynomial Degree 2 is sweet spot
+- Higher degrees cause overfitting
+
+## Scaling Comparison
+- StandardScaler, RobustScaler, ColumnTransformer tested
+- Linear Regression is scale invariant
+- All scalers gave same R2: 0.7107
 
 ## Libraries Used
 - Python
@@ -30,48 +77,33 @@ Machine Learning.
 
 ## Steps Followed
 1. Data Loading
-2. Exploratory Data Analysis (EDA)
-3. Data Cleaning - handled missing values
-4. Feature Selection using Correlation Heatmap
-5. Model Building using Linear Regression
-6. Model Evaluation using R2 Score and RMSE
-
-## Results
-For a house priced at $500,000
-→ Predicted sqft_living ≈ 2500 sqft
+2. Exploratory Data Analysis
+3. Data Cleaning
+4. Feature Engineering
+5. Feature Selection using Heatmap
+6. Train Test Split
+7. Feature Scaling (3 methods compared)
+8. Model Building (5 models compared)
+9. Model Evaluation
+10. Feature Importance Analysis
 
 ## Future Improvements
-- Will try Random Forest and XGBoost
+- Random Forest (after Andrew Ng Course 2)
+- XGBoost (after Andrew Ng Course 2)
+- Target R2 → 0.85+
 - Hyperparameter tuning
-- Add more features
+
+## Learning Journey
+- Started  → R2: 0.6935 (Basic Linear Regression)
+- Improved → R2: 0.7847 (Polynomial Degree 2)
+- Applied concepts from Andrew Ng's ML Specialization:
+  ✅ Feature Engineering
+  ✅ Feature Scaling
+  ✅ Regularization (Ridge & Lasso)
+  ✅ Polynomial Regression
+  ✅ Overfitting & Underfitting
 
 ## Author
 Ramya Sri Lalitha
 B.Tech Computer Science & Engineering
-```
-
----
-
-**How to create this file:**
-
-**Option 1 — Directly on GitHub (easiest):**
-- Go to your repository
-- Click **"Add file"** → **"Create new file"**
-- Name it exactly **README.md**
-- Paste the above content
-- Click **"Commit changes"** ✅
-
-**Option 2 — On your computer:**
-- Open Notepad
-- Paste the content
-- Save as **README.md** in your project folder
-- Then upload to GitHub
-
----
-
-**One important thing:**
-
-Update the R2 Score and RMSE with your **actual values** — you already have them:
-```
-R2 Score : 0.6761035504336752
-RMSE     : 212033.77031852517
+GitHub: github.com/ImmadiRamyaSri
